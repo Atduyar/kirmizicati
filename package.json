@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "type": "module",
+  "name": "kirmizicati",
+  "description": "- [ ] Cihaz Id - [ ] Kullanıcı Id - [ ] Tarih Saat - [ ] Değer1 - [ ] Değer2 - [ ] Kural1 - [ ] Kural2 - [ ] Sonuç - [ ] Bildirim",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "prisma": "^4.9.0"
+  },
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Atduyar/kirmizicati.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Atduyar/kirmizicati/issues"
+  },
+  "homepage": "https://github.com/Atduyar/kirmizicati#readme"
+}

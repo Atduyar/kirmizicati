@@ -24,7 +24,7 @@ app.get('/data:id', async (req, res) => {
 	res.json(post)
 })
 
-app.post('/post', async (req, res) => {
+app.post('/data', async (req, res) => {
 	const { title, content, authorEmail } = req.body
 	const post = await prisma.data.create({
 		data: {

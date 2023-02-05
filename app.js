@@ -10,6 +10,9 @@ const port = process.env.PORT || 5000
 const prisma = new PrismaClient()
 const app = express()
 
+
+app.use(express.json())
+
 app.get('/', async (req, res) => {
 	res.send('Hello World!')
 })
@@ -26,6 +29,7 @@ app.get('/data:id', async (req, res) => {
 })
 
 app.post('/data', async (req, res) => {
+	console.log(req.body);
 	const post = await prisma.data.create({
 		data: {
 			...req.body

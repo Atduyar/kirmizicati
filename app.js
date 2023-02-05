@@ -27,7 +27,10 @@ app.get('/data', async (req, res) => {
 app.get('/data:id', async (req, res) => {
 	const { id } = req.params
 	const post = await prisma.data.findUnique({
-		where: { id }
+		where: { id: +id }
+	}).catch(err=>{
+		res.status(400)
+		return {error: err.message}
 	})
 	res.json(post)
 })

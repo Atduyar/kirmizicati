@@ -24,7 +24,7 @@ app.get('/data', async (req, res) => {
 	const post = await prisma.data.findMany()
 	res.json(post)
 })
-app.get('/data:id', async (req, res) => {
+app.get('/data/:id', async (req, res) => {
 	const { id } = req.params
 	const post = await prisma.data.findUnique({
 		where: { id: +id }

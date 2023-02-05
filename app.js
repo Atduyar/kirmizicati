@@ -34,6 +34,9 @@ app.post('/data', async (req, res) => {
 		data: {
 			...req.body
 		},
+	}).catch(err=>{
+		res.status(400)
+		return {error: err.message}
 	})
 	res.json(post)
 })

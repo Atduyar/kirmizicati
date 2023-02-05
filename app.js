@@ -16,6 +16,10 @@ app.use(express.json())
 app.get('/', async (req, res) => {
 	res.send('Hello World!')
 })
+app.get('/clear', async (req, res) => {
+	const post = await prisma.data.deleteMany()
+	res.json(post)
+})
 app.get('/data', async (req, res) => {
 	const post = await prisma.data.findMany()
 	res.json(post)
